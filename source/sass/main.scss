@@ -1,4 +1,4 @@
-// We architecting this project follow as the "7-1 Pattern" (7 folders, 1 file)
+// We architecting this project follow as the '7-1 Pattern' (7 folders, 1 file)
 // For more detail about this pattern
 // (https://sass-guidelin.es/#the-7-1-pattern)
 
@@ -8,7 +8,10 @@
 // Need vendors go first because we inherit all of sass files of Bootstrap 4
 // @import 'bootstrap/scss/bootstrap-grid';
 // @import 'bootstrap/scss/bootstrap-reboot';
-// @import 'bootstrap/scss/bootstrap';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css';
+@import 'flatpickr/dist/flatpickr.min';
+@import 'easy-autocomplete/dist/easy-autocomplete.min';
 
 // 2. Abstracts
 // ------------
@@ -29,12 +32,18 @@
 
 // 5. Components
 // -------------
-@import 'components/table';
+@import 'components/toggle';
+@import 'components/button';
+@import 'components/checkbox';
+@import 'components/calendar';
+@import 'components/range';
 
 // 6. Pages
 // --------
 @import 'pages/home';
 
-// 7. Themes
+// 7. Override
+@import 'plugin/plugin';
+@import 'base/helper';
 // ---------
 // We just have only 1 theme in this project

@@ -1,0 +1,78 @@
+/* stylelint-disable */
+.toggle-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 5px 36px 7px rgba(0, 0, 0, 0.18);
+  @include circle(70px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  @include breakpoint-down(phone) {
+    right: 10px;
+    bottom: 20px;
+    @include circle(60px);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: url("../images/close_icon.svg") no-repeat center;
+    background-size: contain;
+    transition: all .3s;
+  }
+
+  &.active {
+    background: $primary;
+    bottom: 44px;
+
+    @include breakpoint-down(phone) {
+      right: 10px;
+      bottom: 20px;
+    }
+
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+
+    .toggle-icon__number {
+      display: none;
+    }
+  }
+
+  img {
+    // transition: all .2s;
+  }
+
+  &.active img {
+    max-height: 0;
+  }
+
+  &__number {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: $pink;
+    color: $white;
+    font-size: $font-size-small;
+    font-family: $font-family-title;
+    border-radius: 50%;
+  }
+
+  &__img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

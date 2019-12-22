@@ -4,4 +4,8 @@ block head
   +head('Home')
 
 block main
-  <iframe src="./chatbot.html"></iframe>
+  .toggle-icon
+    .toggle-icon__number 1
+    .toggle-icon__img
+      img(src="images/icon_user.svg", alt="")
+  iframe#iframe-chat(src="./chatbot.html")

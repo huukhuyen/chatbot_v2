@@ -4,4 +4,375 @@ block head
   +head('chatbot')
 
 block main
-  ahihi
+  .page-wrap
+
+    .chat-wrap
+      .chat-box.chat-box--welcome
+        .chat-box__header
+          h2 Welcome, I’m Obiibot!
+          p.chat-box__title Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula?
+        .chat-box__input
+          textarea(placeholder="Reply to Obiibot")
+          .chat-box__button-send.js-chat-intro
+
+      .chat-box.chat-content.chat-box--option.d-none
+        #chatbox-message.chat-container.chat-box-main.chat-intro
+          .chat-box__header.chat-box__header--top
+            .chat-box__header-group
+              .chat-box__header-avatar
+                img(src="images/icon_user.svg", alt="")
+              .chat-box__header-info
+                h2 Welcome, Title!
+                p.chat-box__title Morbi in sem quis dui plac erat
+          .option-box
+            .option-box__link
+              .option-box__header Suspendisse urna nibh, viv erra non, semper!
+              ul.option-box__list
+                li.option-box__item
+                  a.option-box__item-group(href="#")
+                    .option-box__icon
+                      img(src="images/option01.svg", alt="")
+                    .option-box__description
+                      h3.option-box__title Donecodio
+                      p.option-box__text Praesent dapibus, neque id
+                li.option-box__item
+                  a.option-box__item-group(href="#")
+                    .option-box__icon
+                      img(src="images/option02.svg", alt="")
+                    .option-box__description
+                      h3.option-box__title Donecodio
+                      p.option-box__text Praesent dapibus, neque id
+                li.option-box__item
+                  a.option-box__item-group(href="#")
+                    .option-box__icon
+                      img(src="images/option03.svg", alt="")
+                    .option-box__description
+                      h3.option-box__title Donecodio
+                      p.option-box__text Praesent dapibus, neque id
+                li.option-box__item
+                  a.option-box__item-group(href="#")
+                    .option-box__icon
+                      img(src="images/option03.svg", alt="")
+                    .option-box__description
+                      h3.option-box__title Donecodio
+                      p.option-box__text Praesent dapibus, neque id
+            .option-box__button.js-show-message
+              button.button.button--top.js-button-chat CONTINUE CONVERSATION
+        #chatbox-faq.chat-container.chat-box-main.chat-faq.d-none
+          .chat-faq__header.chat-box__header
+            .chat-box__header-group
+              .chat-box__header-avatar.js-btn-back
+                img(src="images/back.png", alt="")
+              .chat-box__header-info
+                h2 FAQs
+                p.chat-box__title Morbi in sem quis dui plac erat ornare, Pellentesque
+          #faq-step-01.chat-faq__list
+            a.chat-faq__item(href="#")
+              .chat-faq__avatar
+                img(src="images/faq01.svg", alt="")
+              .chat-faq__description
+                h3.chat-faq__title Volutpat
+                p.chat-faq__text Praesent dapibus, neque id cursus faucibus.
+            a.chat-faq__item(href="#")
+              .chat-faq__avatar
+                img(src="images/faq02.svg", alt="")
+              .chat-faq__description
+                h3.chat-faq__title Volutpat
+                p.chat-faq__text Praesent dapibus, neque id cursus faucibus.
+            a.chat-faq__item(href="#")
+              .chat-faq__avatar
+                img(src="images/faq03.svg", alt="")
+              .chat-faq__description
+                h3.chat-faq__title Volutpat
+                p.chat-faq__text Praesent dapibus, neque id cursus faucibus.
+            a.chat-faq__item(href="#")
+              .chat-faq__avatar
+                img(src="images/faq04.svg", alt="")
+              .chat-faq__description
+                h3.chat-faq__title Volutpat
+                p.chat-faq__text Praesent dapibus, neque id cursus faucibus.
+          #faq-step-02.chat-faq__list.d-none
+            .scroll-list
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Morbi in sem quis dui placerat ornare?
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Morbi in sem quis dui placerat ornare?
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Lorem ipsum dolor sit amet, consec tetuer adipiscing elit?
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Morbi in sem quis dui placerat ornare?
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Lorem ipsum dolor sit amet, consec tetuer adipiscing elit?
+              a.chat-faq__item(href="#")
+                .chat-faq__description
+                  h3.chat-faq__title.chat-faq__title--small Morbi in sem quis dui placerat ornare?
+            a.chat-faq__item.chat-faq__item--fixed(href="#")
+              .chat-faq__description
+                h3.chat-faq__title.chat-faq__title--small Suspendisse urna nibh, viverra non?
+          #faq-step-03.faq.d-none
+            h2.faq__title Aliquam erat volutpat?
+            .faq__description
+              p.faq__text Marketers/advertisers usually focus their efforts on the people responsible for making the purchase. In many cases, this is an effective approach but in other cases it can make for a totally useless marketing campaign.
+              p.faq__text Virgin Mobile took a more effective approach in marketing their cell phone service by focusing not on the people that would be making the actual purchase, but instead focusing on the influencers of the people making the purchase. To make this campaign work.
+            .faq__vote
+              .faq__vote__text Was this article userful?
+              button.faq__vote__icon
+                img(src="images/like_up.png", alt="")
+              button.faq__vote__icon
+                img(src="images/like_down.png", alt="")
+
+        .chat-control
+          .copyright
+            img(src="images/copyright.png", alt="")
+          .chat-control__list.js-chat-faq
+            .chat-control__item.active(data-chatbox="chatbox-message") CHAT
+            .chat-control__item(data-chatbox="chatbox-faq") FAQ
+
+      .chat-box.chat-content.chat-box--main.d-none
+        #chatbox-main.chat-container.chat-main
+          .chat-box__header
+            .chat-box__header-group
+              .chat-main__avatar
+                img(src="images/icon_user.svg", alt="")
+              h2.chat-main__title Chatname
+          .chat-main__body
+            .chat-body
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .range
+                        input.range__input.js-range(type='range', step='1', min='0', max='50' value='15')
+                        .range__text Prefix:
+                          span.range__value 15
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text Option selection
+                      .slider.slider-image
+                        div
+                          img(src='images/images.png')
+                          h4.slider-image__title Video Title
+                          p.slider-image__text Random Contents Go Here 1
+                          a.button-link(href="#") Product Page
+
+                        div
+                          img(src='images/images.png')
+                          h4.slider-image__title Video Title
+                          p.slider-image__text Random Contents Go Here 2
+                          a.button-link(href="#") Product Page
+
+                        div
+                          img(src='images/images.png')
+                          h4.slider-image__title Video Title
+                          p.slider-image__text Random Contents Go Here 3
+                          a.button-link(href="#") Product Page
+                    .message__time 2 mins ago
+
+              .message.message--right
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box
+                      img(src="images/images.png", alt="")
+                  .message__time 2 mins ago
+
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text Option selection
+                      .radio.radio--tick
+                        input.radio__input(type="checkbox" id="radio1" name="choice")
+                        label.radio__label(for="radio1" class="btn-choice") Elders of the internet kill me softly
+                      .radio.radio--tick
+                        input.radio__input(type="checkbox" id="radio2" name="choice")
+                        label.radio__label(for="radio2" class="btn-choice") Option 1
+                      .radio.radio--tick
+                        input.radio__input(type="checkbox" id="radio3" name="choice")
+                        label.radio__label(for="radio3" class="btn-choice") Option 2
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis? luctus, metus.
+                  .message__time 2 mins ago
+              .message.message--right
+                .message__group
+                  .message__author You
+                  .message__box-wrap
+                    .message__box Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis? luctus, metus.
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box
+                      .message__text Option selection
+                      .radio.radio--dot
+                        input.radio__input(type="radio" id="radioo1" name="choice")
+                        label.radio__label(for="radioo1" class="btn-choice") Elders of the internet kill me softly
+                      .radio.radio--dot
+                        input.radio__input(type="radio" id="radioo2" name="choice")
+                        label.radio__label(for="radioo2" class="btn-choice") Option 1
+                      .radio.radio--dot
+                        input.radio__input(type="radio" id="radioo3" name="choice")
+                        label.radio__label(for="radioo3" class="btn-choice") Option 2
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text.pb-0 Book an appointment/meeting.
+                    button.button-confirm.js-book-calendar Book Appointment
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box
+                      img(src="images/images.png", alt="")
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box
+                      .message__text How was your experience?
+                      .reaction
+                        .reaction__list.js-reaction
+                          each value, index in ['Terrible', 'Bad', 'Okayish', 'Good', 'Awesome']
+                            .reaction__item(class=`${index == 5 ? "active" : ""}` data-reaction=value)
+                              img(src=`images/sticker0${index+1}.png`, alt="")
+                        .reaction__text
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box
+                      .message__text How likely do you recommend us to a friend or colleague?
+                      .vote-number__list
+                        each value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                          .radio.radio--circle
+                            input.radio__input(type="radio" id=`vote${value}` name="choice" checked=`${value == 1 ? "active" : ""}`)
+                            label.radio__label(for=`vote${value}` class="btn-choice")=value
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text Upload your files
+                      .box-upload
+                        .box-upload__group
+                          input.box-upload__input(type="file")
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text Upload your files
+                      .box-upload
+                        .box-upload__group.box-upload__group--file-type
+                          input.box-upload__input(type="file")
+                        .box-upload__file-name Filename.pdf
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+
+              .file-type
+                .file-type__item
+                  img(src="images/icon_word.svg", alt="")
+                .file-type__item
+                  img(src="images/icon_pdf.svg", alt="")
+                .file-type__item
+                  img(src="images/icon_excel.svg", alt="")
+
+              .message.message--left44
+                .message__group
+                  .message__box-wrap
+                    .message__author Josie Goodman
+                    .message__box.message__box--image.message__box--confirm
+                      .message__text Upload your files
+                      .box-upload
+                        .box-upload__group
+                          .box-upload__img
+                            .box-upload__remove
+                            img(src="images/images.png", alt="")
+                        .box-upload__file-name Filename.jpg
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--image.message__box--confirm
+                      .message__text Upload your files
+                      .box-upload
+                        .box-upload__group
+                          .box-upload__img
+                            .box-upload__remove
+                            img(src="images/images.png", alt="")
+                        h4.box-upload__title Filename.jpg
+                        .box-upload__text Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris.
+                        a.button-link(href="#") Product Page
+                    button.button-confirm Confirm
+                  .message__time 2 mins ago
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--link
+                      .message__text Links
+                      a.button-link(href="#") Product Page
+                      a.button-link(href="#") Product Page
+                  .message__time 2 mins ago
+              .message.message--right
+                .message__group
+                  .message__author You
+                  .message__box-wrap
+                    .message__box Option 1.
+                  .message__time 2 mins ago
+          .chat-footer
+            .copyright
+              img(src="images/copyright.png", alt="")
+            .chat-box__input
+              textarea.js-textarea(placeholder="Type your message here")
+              .chat-box__button-send
+        .calendar
+          .date
+          .calendar__hour
+            .first-chose-time.calendar__hour-group.active
+              each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
+                .radio.hour-choose.radio--hour
+                  input.radio__input(type="radio" id=`hour${index}` name="choice")
+                  label.radio__label(for=`hour${index}` class="btn-choice")=val
+              .time-control
+                .time-control__icon.time-control__icon--prev.js-prev-hour
+                .time-control__icon.time-control__icon--next.js-next-hour.active
+            .last-chose-time.calendar__hour-group
+              each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
+                .radio.hour-choose.radio--hour
+                  input.radio__input(type="radio" id=`hour0${index}` name="choice")
+                  label.radio__label(for=`hour0${index}` class="btn-choice")=val
+              .time-control
+                .time-control__icon.time-control__icon--prev.js-prev-hour
+                .time-control__icon.time-control__icon--next.js-next-hour.active

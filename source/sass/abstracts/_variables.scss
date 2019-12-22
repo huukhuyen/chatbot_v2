@@ -1,6 +1,7 @@
 // ======================================================
 // Abstracts :: Variables
 // ======================================================
+/* stylelint-disable */
 
 // Paths
 $path-image: '../images';
@@ -9,11 +10,16 @@ $path-fonts: '../fonts';
 // Fonts
 // >> Font-family
 $font-family-base : 'Poppins', sans-serif;
+$font-family-title : 'Roboto', sans-serif;
 // >> Font-size
-$font-size-small  : 12px;
-$font-size-base   : 14px;
-$font-size-medium : 16px;
-$font-size-large  : 18px;
+$font-size-small  : 1.2rem;
+$font-size-base   : 1.4rem;
+$font-size-medium : 1.6rem;
+$font-size-large  : 1.8rem;
+$font-size-xl  : 2rem;
+$font-size-xl2  : 2.2rem;
+$font-size-xxl  : 2.4rem;
+$font-size-xxxl  : 2.6rem;
 // >> Font-weight
 $font-weight-light: 300;
 $font-weight-base : 400;
@@ -23,6 +29,23 @@ $font-weight-bold : 600;
 $border-radius-small : 2px;
 $border-radius-base  : 4px;
 $border-radius-medium: 8px;
+
+// Color
+$primary: #8300D8;
+$white: #fff;
+$white_2: #FBFAFC;
+$white_3: rgba(0, 0, 0, .2);
+$white_4: #f9f8f9;
+$black: #000;
+$text: #0E2A2F;
+$gray1: #A59BAB;
+$pink: #EC1D7F;
+$border: #707070;
+$border2: #F5F2F6;
+$border3: #e4dce7;
+$dark-blue-grey: #0e2a2f;
+
+$box-shadow: 0 8px 39px 0 rgba(152, 112, 172, 0.15);
 
 // z-index
 $z-indexes: (

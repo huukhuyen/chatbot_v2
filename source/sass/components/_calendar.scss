@@ -1,0 +1,167 @@
+/* stylelint-disable */
+.calendar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  background: $white;
+  padding: 20px;
+  z-index: 9;
+  box-shadow: 0 2px 39px 0 $white_2;
+  transition: all .4s;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &__hour-group {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &.active {
+      display: flex;
+    }
+
+    .hour-choose {
+      width: calc((100% / 3) - 6px);
+      margin-right: 9px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .flatpickr-calendar {
+    box-shadow: none;
+  }
+
+  .flatpickr-day {
+    transition: all .3s;
+
+    &.selected {
+      background: $primary;
+      border-color: $primary;
+    }
+
+    &.today {
+      color: $white;
+      border-color: $primary;
+    }
+
+    &.today:hover,
+    &.today:focus,
+    &:hover {
+      color: $primary;
+      background: $white;
+      border-color: $primary;
+    }
+  }
+
+  .flatpickr-months {
+    > span {
+      top: -3px;
+    }
+
+    svg path {
+      fill: $primary !important;
+    }
+  }
+
+  .flatpickr-weekday {
+    color: $black;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:first-child,
+    &:last-child {
+      color: $gray1;
+    }
+  }
+
+  .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+    text-overflow: "";
+    text-indent: 0.01px;
+    appearance: none;
+    background: $white;
+    font-size: $font-size-base;
+  }
+
+  .flatpickr-current-month input.cur-year,
+  .flatpickr-monthDropdown-months {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .flatpickr-current-month {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding-top: 0;
+  }
+
+  .flatpickr-months {
+    position: relative;
+    padding-bottom: 20px;
+  }
+}
+
+.time-control {
+  display: flex;
+
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 38px;
+    border: 1px solid $border3;
+    cursor: pointer;
+
+    @include breakpoint-down(phone) {
+      width: 42px;
+    }
+
+    &--prev {
+      border-top-left-radius: 23px;
+      border-bottom-left-radius: 23px;
+
+      &:after {
+        transform: translateX(50%) rotate(45deg);
+        border-bottom: 1px solid $border3;
+        border-left: 1px solid $border3;
+      }
+    }
+
+    &--next {
+      border-top-right-radius: 23px;
+      border-bottom-right-radius: 23px;
+
+      &:after {
+        transform: translateX(-50%) rotate(45deg);
+        border-top: 1px solid $border3;
+        border-right: 1px solid $border3;
+      }
+    }
+
+    &:hover,
+    &.active {
+      &:after {
+        border-color: $primary;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      transition: all .3s;
+    }
+  }
+}
