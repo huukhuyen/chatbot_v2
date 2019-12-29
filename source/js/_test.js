@@ -2,9 +2,15 @@ function checkPositionSlide() {
   var heightSlideItem = $('.slick-current img').height();
   $('.slick-next, .slick-prev').css('top', `calc(${heightSlideItem}px / 2 )`);
 }
+
 setTimeout(function() {
   checkPositionSlide();
 }, 500);
+
+setTimeout(function() {
+  $('#iframe-chat').fadeIn();
+  $('#iframe-chat').removeClass('d-none');
+}, 4000);
 
 $('.js-chat-faq .chat-control__item').on('click', function() {
   $('.js-chat-faq .chat-control__item').removeClass('active');
@@ -13,7 +19,6 @@ $('.js-chat-faq .chat-control__item').on('click', function() {
   $('.chat-box-main')
     .stop()
     .slideUp('100');
-  // $('.chat-container').stop().slideUp('100');
   $(`#${idTab}`)
     .stop()
     .slideDown('100');
@@ -56,23 +61,6 @@ $('.js-next-hour').click(function() {
   $('.first-chose-time').removeClass('active');
   $('.last-chose-time').addClass('active');
 });
-
-// toggle calendar book
-$('.js-book-calendar').on('click', function() {
-  $('.calendar')
-    .stop()
-    .toggleClass('active');
-});
-
-// $(document).on('click', function() {
-//   if ($('.calendar').hasClass('active')) {
-//     $(document).on('click', function(e) {
-//       if ($(e.target).parents('.calendar').length === 0) {
-//         $('.calendar').removeClass('active');
-//       }
-//     });
-//   }
-// });
 
 $('.slick-arrow').click(function() {
   checkPositionSlide();
@@ -133,6 +121,13 @@ $('.js-chat-intro').click(function() {
   $('#iframe-chat', window.parent.document).addClass('chat-active');
 });
 
+// $('.toggle-icon').click(function() {
+//   $(this).addClass('active js-close-chat');
+//   $('.chat-box--welcome').hide();
+//   $('.chat-box--option').show();
+//   $('#iframe-chat').addClass('chat-active');
+// })
+
 $('.toggle-icon').click(function() {
   var checkToggle = $(this).hasClass('js-close-chat');
   if (checkToggle) {
@@ -148,3 +143,34 @@ $('.toggle-icon').click(function() {
     $('.toggle-icon').removeClass('active js-close-chat');
   }
 });
+
+// toggle calendar book
+$('.js-book-calendar').on('click', function() {
+  $('.calendar')
+    .stop()
+    .toggleClass('active');
+});
+
+$('.js-calendar-close, .js-calendar-confirm').click(function() {
+  $('.calendar')
+    .stop()
+    .toggleClass('active');
+});
+
+$('.date').flatpickr({
+  inline: true
+});
+
+$('.month-mask').on('click', function() {
+  $('.month').addClass('active');
+});
+
+$('.month__item').on('click', function() {
+  var valueHour = $(this).data('month');
+  $('.flatpickr-monthDropdown-months').val(valueHour);
+  $('.month').toggleClass('active');
+});
+
+$('.flatpickr-monthDropdown-months').wrap('<div class="month-wrap"></div>');
+
+$('.month-mask').appendTo('.month-wrap');

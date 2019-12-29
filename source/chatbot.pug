@@ -153,7 +153,14 @@ block main
                           span.range__value 15
                     button.button-confirm Confirm
                   .message__time 2 mins ago
-
+              .message.message--left
+                .message__group
+                  .message__author Josie Goodman
+                  .message__box-wrap
+                    .message__box.message__box--confirm
+                      .message__text.pb-0 Book an appointment/meeting.
+                    button.button-confirm.js-book-calendar Book Appointment
+                  .message__time 2 mins ago
               .message.message--left
                 .message__group
                   .message__author Josie Goodman
@@ -234,14 +241,7 @@ block main
                         input.radio__input(type="radio" id="radioo3" name="choice")
                         label.radio__label(for="radioo3" class="btn-choice") Option 2
                   .message__time 2 mins ago
-              .message.message--left
-                .message__group
-                  .message__author Josie Goodman
-                  .message__box-wrap
-                    .message__box.message__box--confirm
-                      .message__text.pb-0 Book an appointment/meeting.
-                    button.button-confirm.js-book-calendar Book Appointment
-                  .message__time 2 mins ago
+
               .message.message--left
                 .message__group
                   .message__author Josie Goodman
@@ -358,21 +358,30 @@ block main
               textarea.js-textarea(placeholder="Type your message here")
               .chat-box__button-send
         .calendar
-          .date
-          .calendar__hour
-            .first-chose-time.calendar__hour-group.active
-              each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
-                .radio.hour-choose.radio--hour
-                  input.radio__input(type="radio" id=`hour${index}` name="choice")
-                  label.radio__label(for=`hour${index}` class="btn-choice")=val
-              .time-control
-                .time-control__icon.time-control__icon--prev.js-prev-hour
-                .time-control__icon.time-control__icon--next.js-next-hour.active
-            .last-chose-time.calendar__hour-group
-              each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
-                .radio.hour-choose.radio--hour
-                  input.radio__input(type="radio" id=`hour0${index}` name="choice")
-                  label.radio__label(for=`hour0${index}` class="btn-choice")=val
-              .time-control
-                .time-control__icon.time-control__icon--prev.js-prev-hour
-                .time-control__icon.time-control__icon--next.js-next-hour.active
+          .calendar__container
+            .calendar__date
+              .date
+              .month-mask
+              ul.month
+                each value, index in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                  li.month__item(data-month=index)=value
+            .calendar__hour
+              .first-chose-time.calendar__hour-group.active
+                each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
+                  .radio.hour-choose.radio--hour
+                    input.radio__input(type="radio" id=`hour${index}` name="choice")
+                    label.radio__label(for=`hour${index}` class="btn-choice")=val
+                .time-control
+                  .time-control__icon.time-control__icon--prev.js-prev-hour
+                  .time-control__icon.time-control__icon--next.js-next-hour.active
+              .last-chose-time.calendar__hour-group
+                each val, index in ['09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM', '09:00 AM']
+                  .radio.hour-choose.radio--hour
+                    input.radio__input(type="radio" id=`hour0${index}` name="choice")
+                    label.radio__label(for=`hour0${index}` class="btn-choice")=val
+                .time-control
+                  .time-control__icon.time-control__icon--prev.js-prev-hour
+                  .time-control__icon.time-control__icon--next.js-next-hour.active
+          .calendar__control
+            .calendar__button.calendar__button--close.js-calendar-close Close
+            .calendar__button.calendar__button--confirm.js-calendar-confirm Confirm
