@@ -109,3 +109,12 @@ input, textarea, select, button {
     font-size: 9px;
   }
 }
+
+@keyframes anim-glow {
+  0% {
+    box-shadow: 0 0 $primary;
+  }
+  100% {
+    box-shadow: 0 0 10px 8px transparent;
+  }
+}

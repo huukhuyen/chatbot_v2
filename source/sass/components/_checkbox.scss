@@ -20,8 +20,10 @@
 
   &--hour {
     .radio__label {
+      width: 100%;
+      padding: 7px 15px 7px 15px;
       color: $gray1;
-      padding: 8px 20px 8px 20px;
+      text-align: center;
     }
 
     .radio__input {
@@ -50,6 +52,19 @@
         transform: translateY(-50%);
       }
     }
+
+    .radio__input {
+      &:hover,
+      &:checked {
+        + .radio__label {
+          border-color: $primary;
+
+          &:after {
+            border-color: $primary;
+          }
+        }
+      }
+    }
   }
 
   &--tick {
@@ -68,23 +83,15 @@
     }
 
     .radio__input {
+      &:hover,
       &:checked {
         + .radio__label {
+          border-color: $primary;
+
           &:after {
             color: $primary;
             background: transparent;
           }
-        }
-      }
-    }
-  }
-
-  &--tick {
-    .radio__label {
-      &:checked {
-        + .radio__label {
-          background: $primary;
-          color: $white;
         }
       }
     }
@@ -126,6 +133,6 @@
     border-radius: 50px;
     user-select: none;
     cursor: pointer;
-    transition: all .15s ease;
+    transition: all 0.15s ease;
   }
 }

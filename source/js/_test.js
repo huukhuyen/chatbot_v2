@@ -9,7 +9,8 @@ setTimeout(function() {
 
 setTimeout(function() {
   $('#iframe-chat').fadeIn();
-  $('#iframe-chat').removeClass('d-none');
+  $('#iframe-chat').fadeIn();
+  $('#iframe-chat, .toggle-icon__number').removeClass('d-none');
 }, 4000);
 
 $('.js-chat-faq .chat-control__item').on('click', function() {
@@ -118,7 +119,34 @@ $('.js-chat-intro').click(function() {
   $('.chat-box--welcome').hide();
   $('.chat-box--option').show();
   $('.toggle-icon', window.parent.document).addClass('active js-close-chat');
+  $('.toggle-icon', window.parent.document).removeClass('glow');
   $('#iframe-chat', window.parent.document).addClass('chat-active');
+});
+
+$('.toggle-icon').click(function() {
+  $('#iframe-chat').toggleClass('chat-active');
+  $('#iframe-chat')
+    .contents()
+    .find('.chat-box')
+    .hide();
+  $('#iframe-chat')
+    .contents()
+    .find('.chat-box--option')
+    .show();
+    setTimeout(function() {
+      $('.toggle-icon').toggleClass('active js-close-chat glow');
+    }, 100)
+});
+
+$(document).on('click', '.js-close-chat', function() {
+  $('#iframe-chat')
+    .contents()
+    .find('.chat-box')
+    .hide();
+  $('#iframe-chat')
+    .contents()
+    .find('.chat-box--welcome')
+    .show();
 });
 
 // $('.toggle-icon').click(function() {
@@ -127,22 +155,6 @@ $('.js-chat-intro').click(function() {
 //   $('.chat-box--option').show();
 //   $('#iframe-chat').addClass('chat-active');
 // })
-
-$('.toggle-icon').click(function() {
-  var checkToggle = $(this).hasClass('js-close-chat');
-  if (checkToggle) {
-    $('#iframe-chat')
-      .contents()
-      .find('.chat-box--welcome')
-      .show();
-    $('#iframe-chat')
-      .contents()
-      .find('.chat-box--option, .chat-box--main')
-      .hide();
-    $('#iframe-chat').removeClass('chat-active');
-    $('.toggle-icon').removeClass('active js-close-chat');
-  }
-});
 
 // toggle calendar book
 $('.js-book-calendar').on('click', function() {

@@ -27,7 +27,7 @@ block main
           .option-box
             .option-box__link
               .option-box__header Suspendisse urna nibh, viv erra non, semper!
-              ul.option-box__list
+              ul.option-box__list.scroll-list-200
                 li.option-box__item
                   a.option-box__item-group(href="#")
                     .option-box__icon
@@ -66,7 +66,7 @@ block main
               .chat-box__header-info
                 h2 FAQs
                 p.chat-box__title Morbi in sem quis dui plac erat ornare, Pellentesque
-          #faq-step-01.chat-faq__list
+          #faq-step-01.chat-faq__list.scroll-list-300
             a.chat-faq__item(href="#")
               .chat-faq__avatar
                 img(src="images/faq01.svg", alt="")
@@ -92,7 +92,7 @@ block main
                 h3.chat-faq__title Volutpat
                 p.chat-faq__text Praesent dapibus, neque id cursus faucibus.
           #faq-step-02.chat-faq__list.d-none
-            .scroll-list
+            .scroll-list-300
               a.chat-faq__item(href="#")
                 .chat-faq__description
                   h3.chat-faq__title.chat-faq__title--small Morbi in sem quis dui placerat ornare?
@@ -116,9 +116,10 @@ block main
                 h3.chat-faq__title.chat-faq__title--small Suspendisse urna nibh, viverra non?
           #faq-step-03.faq.d-none
             h2.faq__title Aliquam erat volutpat?
-            .faq__description
-              p.faq__text Marketers/advertisers usually focus their efforts on the people responsible for making the purchase. In many cases, this is an effective approach but in other cases it can make for a totally useless marketing campaign.
-              p.faq__text Virgin Mobile took a more effective approach in marketing their cell phone service by focusing not on the people that would be making the actual purchase, but instead focusing on the influencers of the people making the purchase. To make this campaign work.
+            .scroll-list-250
+              .faq__description
+                p.faq__text Marketers/advertisers usually focus their efforts on the people responsible for making the purchase. In many cases, this is an effective approach but in other cases it can make for a totally useless marketing campaign.
+                p.faq__text Virgin Mobile took a more effective approach in marketing their cell phone service by focusing not on the people that would be making the actual purchase, but instead focusing on the influencers of the people making the purchase. To make this campaign work.
             .faq__vote
               .faq__vote__text Was this article userful?
               button.faq__vote__icon
@@ -128,7 +129,9 @@ block main
 
         .chat-control
           .copyright
-            img(src="images/copyright.png", alt="")
+            img(src="images/copyright.svg", alt="")
+            span.copyright__by by
+            span.copyright__company ObiiBot
           .chat-control__list.js-chat-faq
             .chat-control__item.active(data-chatbox="chatbox-message") CHAT
             .chat-control__item(data-chatbox="chatbox-faq") FAQ
@@ -353,7 +356,9 @@ block main
                   .message__time 2 mins ago
           .chat-footer
             .copyright
-              img(src="images/copyright.png", alt="")
+              img(src="images/copyright.svg", alt="")
+              span.copyright__by by
+              span.copyright__company ObiiBot
             .chat-box__input
               textarea.js-textarea(placeholder="Type your message here")
               .chat-box__button-send

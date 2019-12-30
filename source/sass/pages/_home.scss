@@ -75,10 +75,6 @@
     &--top {
       min-height: 270px;
       padding: 15px 20px;
-
-      @include breakpoint-down(phone) {
-        min-height: 300px;
-      }
     }
   }
 
@@ -159,15 +155,13 @@
   }
 
   &__header {
-    font-size: $font-size-xl2;
-    padding: 0 20px 15px;
+    font-size: $font-size-xl;
+    padding: 0 20px 12px;
     font-weight: 500;
     line-height: 1.3;
   }
 
   &__list {
-    max-height: 200px;
-    overflow: auto;
     padding: 0 20px;
   }
 
@@ -188,14 +182,14 @@
   }
 
   &__title {
-    font-size: $font-size-large;
+    font-size: $font-size-medium;
     font-weight: 500;
     color: $black;
   }
 
   &__text {
     color: $gray1;
-    font-size: $font-size-base;
+    font-size: 1.3rem;
   }
 
   .button {
@@ -209,6 +203,10 @@
 .chat-faq {
   &__avatar {
     margin-right: 15px;
+  }
+
+  &__list {
+    max-height: 349px !important;
   }
 
   &__item {
@@ -240,17 +238,12 @@
     color: $black;
 
     &--small {
-      font-size: 16px;
+      font-size: $font-size-base;
     }
   }
 
   &__text {
     color: $gray1;
-  }
-
-  .scroll-list {
-    max-height: 368px;
-    overflow: auto;
   }
 }
 
@@ -299,13 +292,26 @@
   }
 }
 
-.chat-control {
-  .copyright {
-    background: $white_2;
-    padding: 12px 0;
-    text-align: center;
+.copyright {
+  background: $white_2;
+  padding: 5px 0;
+  text-align: center;
+
+  &__by {
+    color: $gray1;
+    font-weight: 500;
+    font-size: $font-size-small;
+    margin: 0 6px;
   }
 
+  &__company {
+    color: $primary;
+    font-weight: 600;
+    font-size: $font-size-small;
+  }
+}
+
+.chat-control {
   &__list {
     display: flex;
   }
@@ -345,7 +351,7 @@
     max-height: 345px;
     overflow: auto;
     background: $white;
-    padding: 25px;
+    padding: 20px;
   }
 
   .chat-body {
@@ -449,13 +455,6 @@
     color: $gray1;
     font-size: $font-size-small;
     line-height: 1.5;
-  }
-}
-
-.chat-footer {
-  .copyright {
-    padding: 15px 0;
-    text-align: center;
   }
 }
 

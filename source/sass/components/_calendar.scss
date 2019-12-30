@@ -4,18 +4,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  transform: translateY(100%);
-  background: $white;
   z-index: 9;
+  background: $white;
+  border-radius: 12px;
   box-shadow: 0 2px 39px 0 $white_2;
+  transform: translateY(100%);
   transition: all .4s;
+  overflow: hidden;
 
   &.active {
     transform: translateY(0);
   }
 
   &__container {
-    padding: 15px 30px;
+    padding: 15px 20px;
+    // max-height: 405px;
+    max-height: 475px;
+    overflow: auto;
   }
 
   &__hour {
@@ -55,7 +60,7 @@
   .month {
     position: absolute;
     top: 0;
-    right: 60px;
+    right: 50px;
     background: $white;
     border-radius: 20px;
     box-shadow: 0 2px 39px 0 $shadow;
@@ -107,6 +112,7 @@
     display: none;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-start;
 
     &.active {
       display: flex;
@@ -206,6 +212,8 @@
 
 .time-control {
   display: flex;
+  border-radius: 23px;
+  border: 1px solid $border3;
 
   &__icon {
     position: relative;
@@ -213,18 +221,14 @@
     align-items: center;
     justify-content: center;
     width: 46px;
-    height: 38px;
-    border: 1px solid $border3;
+    height: 34px;
     cursor: pointer;
 
     @include breakpoint-down(phone) {
-      width: 42px;
+      width: 45px;
     }
 
     &--prev {
-      border-top-left-radius: 23px;
-      border-bottom-left-radius: 23px;
-
       &:after {
         transform: translateX(50%) rotate(45deg);
         border-bottom: 1px solid $border3;
@@ -233,8 +237,7 @@
     }
 
     &--next {
-      border-top-right-radius: 23px;
-      border-bottom-right-radius: 23px;
+      border-left: 1px solid $border3;
 
       &:after {
         transform: translateX(-50%) rotate(45deg);
