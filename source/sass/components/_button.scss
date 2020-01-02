@@ -7,6 +7,7 @@
   border-radius: 100px;
   background: $white;
   font-weight: 500;
+  transition: all .3s;
 
   &--top {
     padding: 15px 30px;
@@ -45,5 +46,49 @@
   &:hover {
     color: $primary;
     border-color: $primary;
+  }
+}
+
+.confirm {
+  &__button {
+    min-width: 100px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    padding: 10px 14px;
+    color: $primary;
+    border: 1px solid #e9e3eb;
+    border-radius: 23px;
+
+    &:hover,
+    &.active {
+      border-color: $primary;
+    }
+  }
+}
+
+.group-confirm {
+  display: flex;
+  align-items: center;
+  max-width: 282px;
+
+  &__button {
+    flex: 1;
+    padding: 12px;
+    background: $white;
+    color: $primary;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid $border3;
+
+    &:first-child {
+      border-right: 0;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 20px;
+    }
   }
 }

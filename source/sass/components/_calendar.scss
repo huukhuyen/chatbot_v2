@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9;
+  z-index: 99;
   background: $white;
   border-radius: 12px;
   box-shadow: 0 2px 39px 0 $white_2;
@@ -31,9 +31,21 @@
     position: relative;
   }
 
-  .month-wrap {
+  .month-wrap,
+  .year-wrap {
     position: relative;
     display: flex;
+  }
+
+  .month-mask,
+  .year-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
   }
 
   .flatpickr-monthDropdown-months {
@@ -47,20 +59,18 @@
     }
   }
 
-  .month-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    cursor: pointer;
+  .month {
+    right: 50px;
   }
 
-  .month {
+  .year {
+    left: 30px;
+  }
+
+  .month,
+  .year {
     position: absolute;
     top: 0;
-    right: 50px;
     background: $white;
     border-radius: 20px;
     box-shadow: 0 2px 39px 0 $shadow;

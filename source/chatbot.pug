@@ -154,8 +154,15 @@ block main
                         input.range__input.js-range(type='range', step='1', min='0', max='50' value='15')
                         .range__text Prefix:
                           span.range__value 15
-                    button.button-confirm Confirm
+                    .group-confirm
+                      button.group-confirm__button Skip
+                      button.group-confirm__button Confirm
                   .message__time 2 mins ago
+
+              .confirm
+                button.button.confirm__button Skip
+                button.button.confirm__button.active Confirm
+
               .message.message--left
                 .message__group
                   .message__author Josie Goodman
@@ -366,6 +373,10 @@ block main
           .calendar__container
             .calendar__date
               .date
+              .year-mask
+              ul.year
+                each value, index in ['2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029']
+                  li.year__item(data-year=value)=value
               .month-mask
               ul.month
                 each value, index in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

@@ -9,8 +9,9 @@ setTimeout(function() {
 
 setTimeout(function() {
   $('#iframe-chat').fadeIn();
-  $('#iframe-chat').fadeIn();
   $('#iframe-chat, .toggle-icon__number').removeClass('d-none');
+  var sound = document.getElementById('audio');
+  sound.play();
 }, 4000);
 
 $('.js-chat-faq .chat-control__item').on('click', function() {
@@ -116,6 +117,7 @@ $('.js-button-chat').click(function() {
 
 // Implement with Iframe
 $('.js-chat-intro').click(function() {
+  $('#audio').remove();
   $('.chat-box--welcome').hide();
   $('.chat-box--option').show();
   $('.toggle-icon', window.parent.document).addClass('active js-close-chat');
@@ -124,7 +126,10 @@ $('.js-chat-intro').click(function() {
 });
 
 $('.toggle-icon').click(function() {
-  $('#iframe-chat').toggleClass('chat-active');
+  $('#audio').remove();
+  $('#iframe-chat')
+    .fadeIn()
+    .toggleClass('chat-active');
   $('#iframe-chat')
     .contents()
     .find('.chat-box')
@@ -149,13 +154,6 @@ $(document).on('click', '.js-close-chat', function() {
     .show();
 });
 
-// $('.toggle-icon').click(function() {
-//   $(this).addClass('active js-close-chat');
-//   $('.chat-box--welcome').hide();
-//   $('.chat-box--option').show();
-//   $('#iframe-chat').addClass('chat-active');
-// })
-
 // toggle calendar book
 $('.js-book-calendar').on('click', function() {
   $('.calendar')
@@ -169,7 +167,7 @@ $('.js-calendar-close, .js-calendar-confirm').click(function() {
     .toggleClass('active');
 });
 
-$('.date').flatpickr({
+var fp = $('.date').flatpickr({
   inline: true
 });
 
@@ -177,12 +175,24 @@ $('.month-mask').on('click', function() {
   $('.month').addClass('active');
 });
 
+$('.year-mask').on('click', function() {
+  $('.year').addClass('active');
+});
+
+$('.year__item').on('click', function() {
+  var valueYear = $(this).data('year');
+  fp.jumpToDate(new Date().setFullYear(valueYear));
+  $('.year').toggleClass('active');
+});
+
 $('.month__item').on('click', function() {
-  var valueHour = $(this).data('month');
-  $('.flatpickr-monthDropdown-months').val(valueHour);
+  var valueMonth = $(this).data('month');
+  fp.jumpToDate(new Date().setMonth(valueMonth));
   $('.month').toggleClass('active');
 });
 
 $('.flatpickr-monthDropdown-months').wrap('<div class="month-wrap"></div>');
-
 $('.month-mask').appendTo('.month-wrap');
+
+$('.numInputWrapper').wrap('<div class="year-wrap"></div>');
+$('.year-mask').appendTo('.year-wrap');
