@@ -1,14 +1,18 @@
 /* stylelint-disable */
 .toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 50px;
   bottom: 30px;
   border-radius: 50%;
   box-shadow: 0 5px 36px 7px rgba(0, 0, 0, 0.18);
   @include circle(70px);
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  // transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   user-select: none;
   cursor: pointer;
+  transition: all 0.5s;
 
   @include breakpoint-down(phone) {
     right: 10px;
@@ -55,8 +59,15 @@
     }
   }
 
-  &.active img {
-    max-height: 0;
+  img {
+    max-height: 70px;
+    transition: all .2s;
+  }
+
+  &.active {
+    img {
+      max-height: 0;
+    }
   }
 
   &__number {

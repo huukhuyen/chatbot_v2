@@ -5,10 +5,11 @@ block head
 
 block main
   .page-wrap
-
     .chat-wrap
       .chat-box.chat-box--welcome
         .chat-box__header
+          .icon-close
+            img(src="images/icon_close.svg", alt="")
           h2 Welcome, I’m Obiibot!
           p.chat-box__title Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula?
         .chat-box__input
@@ -366,8 +367,12 @@ block main
               img(src="images/copyright.svg", alt="")
               span.copyright__by by
               span.copyright__company ObiiBot
-            .chat-box__input
-              textarea.js-textarea(placeholder="Type your message here")
+            // -
+              .chat-box__input
+                textarea.js-textarea(placeholder="Type your message here")
+                .chat-box__button-send
+            .chat-box__input.chat-box__input--phone
+              input#js-input-phone(type="tel")
               .chat-box__button-send
         .calendar
           .calendar__container

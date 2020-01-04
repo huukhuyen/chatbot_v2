@@ -10,7 +10,7 @@
 
   ul {
     border-top: 0;
-    border-bottom: 1px solid rgba(#979797, .2);
+    border-bottom: 1px solid rgba(#979797, 0.2);
 
     li,
     .eac-category {
@@ -59,7 +59,7 @@
 }
 
 .slider .slick-next:before {
-  background: url("../images/icon_right.svg") no-repeat center;
+  background: url('../images/icon_right.svg') no-repeat center;
   background-size: contain;
   color: transparent;
   font-size: 12px;
@@ -71,9 +71,67 @@
 }
 
 .slider .slick-prev:before {
-  background: url("../images/icon_left.svg") no-repeat center;
+  background: url('../images/icon_left.svg') no-repeat center;
   background-size: contain;
   color: transparent;
   font-size: 12px;
   opacity: 1;
+}
+
+.iti {
+  &__flag {
+    background-image: url('../images/flags.png');
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../images/flags@2x.png');
+    }
+  }
+
+  &__arrow {
+    border-top: 4px solid $primary;
+
+    &--up {
+      border-top: none;
+      border-bottom: 4px solid $primary;
+    }
+  }
+
+  &__selected-flag {
+    display: flex;
+    align-items: center;
+    background: $white !important;
+
+    .iti__selected-dial-code {
+      order: 3;
+    }
+  }
+
+  .iti__selected-flag {
+    outline: none;
+  }
+
+  &__country-list {
+    width: 215px;
+    max-height: 380px;
+    padding: 20px 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 39px 0 rgba(0, 0, 0, 0.1);
+
+    @include breakpoint-down(phone) {
+      max-height: 300px !important;
+      bottom: 70px;
+    }
+  }
+
+  &__highlight {
+    background-color: $primary !important;
+    color: $white
+  }
+
+  &__preferred,
+  &__divider,
+  &__dial-code {
+    display: none;
+  }
 }

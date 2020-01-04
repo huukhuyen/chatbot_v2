@@ -10,8 +10,12 @@ setTimeout(function() {
 setTimeout(function() {
   $('#iframe-chat').fadeIn();
   $('#iframe-chat, .toggle-icon__number').removeClass('d-none');
-  var sound = document.getElementById('audio');
-  sound.play();
+  try {
+    var sound = document.getElementById('audio');
+    sound.play();
+  } catch (error) {
+    console.log(error);
+  }
 }, 4000);
 
 $('.js-chat-faq .chat-control__item').on('click', function() {
@@ -47,6 +51,11 @@ $('.js-btn-back').on('click', function() {
 
 $('.chat-faq__item').click(function() {
   numberStep = numberStep + 1;
+});
+
+// Close chat welcome
+$('.icon-close').click(function() {
+  $('.chat-box--welcome').hide();
 });
 
 // Next or prev chose time
@@ -138,9 +147,9 @@ $('.toggle-icon').click(function() {
     .contents()
     .find('.chat-box--option')
     .show();
-    setTimeout(function() {
-      $('.toggle-icon').toggleClass('active js-close-chat glow');
-    }, 100)
+  setTimeout(function() {
+    $('.toggle-icon').toggleClass('active js-close-chat glow');
+  }, 100);
 });
 
 $(document).on('click', '.js-close-chat', function() {
@@ -150,8 +159,12 @@ $(document).on('click', '.js-close-chat', function() {
     .hide();
   $('#iframe-chat')
     .contents()
-    .find('.chat-box--welcome')
-    .show();
+    .find('.iti__country-list')
+    .toggleClass('iti__hide');
+  // $('#iframe-chat')
+  //   .contents()
+  //   .find('.chat-box--welcome')
+  //   .show();
 });
 
 // toggle calendar book
@@ -196,3 +209,16 @@ $('.month-mask').appendTo('.month-wrap');
 
 $('.numInputWrapper').wrap('<div class="year-wrap"></div>');
 $('.year-mask').appendTo('.year-wrap');
+
+try {
+  // Phone number input
+  var inputPhone = document.getElementById('js-input-phone');
+  window.intlTelInput(inputPhone, {
+    separateDialCode: true,
+  });
+} catch (error) {
+  console.log(error);
+}
+
+$('#js-input-phone').css('padding-left', '70px');
+

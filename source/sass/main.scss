@@ -12,6 +12,7 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css';
 @import 'flatpickr/dist/flatpickr.min';
 @import 'easy-autocomplete/dist/easy-autocomplete.min';
+@import 'intl-tel-input/build/css/intlTelInput.min';
 
 // 2. Abstracts
 // ------------
@@ -22,12 +23,9 @@
 // 3. Base
 // -------
 @import 'base/global';
-@import 'base/typography';
-@import 'base/images';
 
 // 4. Layout
 // ---------
-@import 'layout/header';
 @import 'layout/footer';
 
 // 5. Components

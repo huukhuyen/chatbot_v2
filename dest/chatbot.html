@@ -16,6 +16,7 @@
       <div class="chat-wrap">
         <div class="chat-box chat-box--welcome">
           <div class="chat-box__header">
+            <div class="icon-close"><img src="images/icon_close.svg" alt=""></div>
             <h2>Welcome, I’m Obiibot!</h2>
             <p class="chat-box__title">Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula?</p>
           </div>
@@ -494,8 +495,13 @@
             </div>
             <div class="chat-footer">
               <div class="copyright"><img src="images/copyright.svg" alt=""><span class="copyright__by">by</span><span class="copyright__company">ObiiBot</span></div>
-              <div class="chat-box__input">
-                <textarea class="js-textarea" placeholder="Type your message here"></textarea>
+              <!-- -
+							.chat-box__input
+							  textarea.js-textarea(placeholder="Type your message here")
+							  .chat-box__button-send
+							-->
+              <div class="chat-box__input chat-box__input--phone">
+                <input id="js-input-phone" type="tel">
                 <div class="chat-box__button-send"></div>
               </div>
             </div>
