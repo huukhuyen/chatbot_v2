@@ -2072,6 +2072,7 @@ input::-moz-focus-outer {
 
 @media (max-device-width: 767.98px) {
   #iframe-chat {
+    width: 100%;
     right: 0;
     bottom: 60px;
   }
@@ -2091,23 +2092,27 @@ input::-moz-focus-outer {
 
 .chat-wrap {
   position: fixed;
+  left: 30px;
   right: 30px;
   bottom: 45px;
+  width: calc(100% - 60px);
 }
 
 @media (max-device-width: 767.98px) {
   .chat-wrap {
+    width: 100%;
+    left: 0;
     right: 0;
   }
 }
 
 .chat-box {
   position: relative;
-  width: 365px;
+  width: 100%;
   border-radius: 12px;
+  overflow: hidden;
   -webkit-box-shadow: 0 8px 39px 0 rgba(152, 112, 172, 0.15);
           box-shadow: 0 8px 39px 0 rgba(152, 112, 172, 0.15);
-  overflow: hidden;
 }
 
 @media only screen and (max-device-width: 640px) {
@@ -2119,6 +2124,7 @@ input::-moz-focus-outer {
 
 .chat-box__header {
   background: url("../images/banner.png") no-repeat;
+  background-size: cover;
   padding: 15px 20px;
 }
 
@@ -2182,9 +2188,10 @@ input::-moz-focus-outer {
 }
 
 .chat-box__input textarea {
-  width: 100%;
+  width: calc(100% - 40px);
   height: 40px;
-  padding: 10px 30px 10px 10px;
+  padding: 9px 30px 7px 10px;
+  font-size: 1.3rem;
   font-family: "Poppins", sans-serif;
   border: 0;
   resize: none;
