@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>chatbot</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="chatbot" />
+    <meta name="keywords" content="chatbot" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="chat-wrap">
+        <div class="chat-box chat-box--welcome">
+          <div class="chat-box__header">
+            <h2>Welcome, I’m Obiibot!</h2>
+            <p class="chat-box__title">Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula?</p>
+          </div>
+          <div class="chat-box__input">
+            <textarea placeholder="Reply to Obiibot"></textarea>
+            <div class="chat-box__button-send js-chat-intro"></div>
+          </div>
+        </div>
+        <div class="chat-box chat-content chat-box--option d-none">
+          <div class="chat-container chat-box-main chat-intro" id="chatbox-message">
+            <div class="chat-box__header chat-box__header--top">
+              <div class="chat-box__header-group">
+                <div class="chat-box__header-avatar"><img src="images/icon_user.svg" alt=""></div>
+                <div class="chat-box__header-info">
+                  <h2>Welcome, Title!</h2>
+                  <p class="chat-box__title">Morbi in sem quis dui plac erat</p>
+                </div>
+              </div>
+            </div>
+            <div class="option-box">
+              <div class="option-box__link">
+                <div class="option-box__header">Suspendisse urna nibh, viv erra non, semper!</div>
+                <ul class="option-box__list scroll-list-200">
+                  <li class="option-box__item"><a class="option-box__item-group" href="#">
+                      <div class="option-box__icon"><img src="images/option01.svg" alt=""></div>
+                      <div class="option-box__description">
+                        <h3 class="option-box__title">Donecodio</h3>
+                        <p class="option-box__text">Praesent dapibus, neque id</p>
+                      </div>
+                    </a></li>
+                  <li class="option-box__item"><a class="option-box__item-group" href="#">
+                      <div class="option-box__icon"><img src="images/option02.svg" alt=""></div>
+                      <div class="option-box__description">
+                        <h3 class="option-box__title">Donecodio</h3>
+                        <p class="option-box__text">Praesent dapibus, neque id</p>
+                      </div>
+                    </a></li>
+                  <li class="option-box__item"><a class="option-box__item-group" href="#">
+                      <div class="option-box__icon"><img src="images/option03.svg" alt=""></div>
+                      <div class="option-box__description">
+                        <h3 class="option-box__title">Donecodio</h3>
+                        <p class="option-box__text">Praesent dapibus, neque id</p>
+                      </div>
+                    </a></li>
+                  <li class="option-box__item"><a class="option-box__item-group" href="#">
+                      <div class="option-box__icon"><img src="images/option03.svg" alt=""></div>
+                      <div class="option-box__description">
+                        <h3 class="option-box__title">Donecodio</h3>
+                        <p class="option-box__text">Praesent dapibus, neque id</p>
+                      </div>
+                    </a></li>
+                </ul>
+              </div>
+              <div class="option-box__button js-show-message">
+                <button class="button button--top js-button-chat">CONTINUE CONVERSATION</button>
+              </div>
+            </div>
+          </div>
+          <div class="chat-container chat-box-main chat-faq d-none" id="chatbox-faq">
+            <div class="chat-faq__header chat-box__header">
+              <div class="chat-box__header-group">
+                <div class="chat-box__header-avatar js-btn-back"><img src="images/back.png" alt=""></div>
+                <div class="chat-box__header-info">
+                  <h2>FAQs</h2>
+                  <p class="chat-box__title">Morbi in sem quis dui plac erat ornare, Pellentesque</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat-faq__list scroll-list-300" id="faq-step-01"><a class="chat-faq__item" href="#">
+                <div class="chat-faq__avatar"><img src="images/faq01.svg" alt=""></div>
+                <div class="chat-faq__description">
+                  <h3 class="chat-faq__title">Volutpat</h3>
+                  <p class="chat-faq__text">Praesent dapibus, neque id cursus faucibus.</p>
+                </div>
+              </a><a class="chat-faq__item" href="#">
+                <div class="chat-faq__avatar"><img src="images/faq02.svg" alt=""></div>
+                <div class="chat-faq__description">
+                  <h3 class="chat-faq__title">Volutpat</h3>
+                  <p class="chat-faq__text">Praesent dapibus, neque id cursus faucibus.</p>
+                </div>
+              </a><a class="chat-faq__item" href="#">
+                <div class="chat-faq__avatar"><img src="images/faq03.svg" alt=""></div>
+                <div class="chat-faq__description">
+                  <h3 class="chat-faq__title">Volutpat</h3>
+                  <p class="chat-faq__text">Praesent dapibus, neque id cursus faucibus.</p>
+                </div>
+              </a><a class="chat-faq__item" href="#">
+                <div class="chat-faq__avatar"><img src="images/faq04.svg" alt=""></div>
+                <div class="chat-faq__description">
+                  <h3 class="chat-faq__title">Volutpat</h3>
+                  <p class="chat-faq__text">Praesent dapibus, neque id cursus faucibus.</p>
+                </div>
+              </a></div>
+            <div class="chat-faq__list d-none" id="faq-step-02">
+              <div class="scroll-list-300"><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Morbi in sem quis dui placerat ornare?</h3>
+                  </div>
+                </a><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Morbi in sem quis dui placerat ornare?</h3>
+                  </div>
+                </a><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Lorem ipsum dolor sit amet, consec tetuer adipiscing elit?</h3>
+                  </div>
+                </a><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Morbi in sem quis dui placerat ornare?</h3>
+                  </div>
+                </a><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Lorem ipsum dolor sit amet, consec tetuer adipiscing elit?</h3>
+                  </div>
+                </a><a class="chat-faq__item" href="#">
+                  <div class="chat-faq__description">
+                    <h3 class="chat-faq__title chat-faq__title--small">Morbi in sem quis dui placerat ornare?</h3>
+                  </div>
+                </a></div><a class="chat-faq__item chat-faq__item--fixed" href="#">
+                <div class="chat-faq__description">
+                  <h3 class="chat-faq__title chat-faq__title--small">Suspendisse urna nibh, viverra non?</h3>
+                </div>
+              </a>
+            </div>
+            <div class="faq d-none" id="faq-step-03">
+              <h2 class="faq__title">Aliquam erat volutpat?</h2>
+              <div class="scroll-list-250">
+                <div class="faq__description">
+                  <p class="faq__text">Marketers/advertisers usually focus their efforts on the people responsible for making the purchase. In many cases, this is an effective approach but in other cases it can make for a totally useless marketing campaign.</p>
+                  <p class="faq__text">Virgin Mobile took a more effective approach in marketing their cell phone service by focusing not on the people that would be making the actual purchase, but instead focusing on the influencers of the people making the purchase. To make this campaign work.</p>
+                </div>
+              </div>
+              <div class="faq__vote">
+                <div class="faq__vote__text">Was this article userful?</div>
+                <button class="faq__vote__icon"><img src="images/like_up.png" alt=""></button>
+                <button class="faq__vote__icon"><img src="images/like_down.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="chat-control">
+            <div class="copyright"><img src="images/copyright.svg" alt=""><span class="copyright__by">by</span><span class="copyright__company">ObiiBot</span></div>
+            <div class="chat-control__list js-chat-faq">
+              <div class="chat-control__item active" data-chatbox="chatbox-message">CHAT</div>
+              <div class="chat-control__item" data-chatbox="chatbox-faq">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box chat-content chat-box--main d-none">
+          <div class="chat-container chat-main" id="chatbox-main">
+            <div class="chat-box__header">
+              <div class="chat-box__header-group">
+                <div class="chat-main__avatar"><img src="images/icon_user.svg" alt=""></div>
+                <h2 class="chat-main__title">Chatname</h2>
+              </div>
+            </div>
+            <div class="chat-main__body">
+              <div class="chat-body">
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="range">
+                          <input class="range__input js-range" type="range" step="1" min="0" max="50" value="15">
+                          <div class="range__text">Prefix:<span class="range__value">15</span></div>
+                        </div>
+                      </div>
+                      <div class="group-confirm">
+                        <button class="group-confirm__button">Skip</button>
+                        <button class="group-confirm__button">Confirm</button>
+                      </div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="confirm">
+                  <button class="button confirm__button">Skip</button>
+                  <button class="button confirm__button active">Confirm</button>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="message__text pb-0">Book an appointment/meeting.</div>
+                      </div>
+                      <button class="button-confirm js-book-calendar">Book Appointment</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="message__text">Option selection</div>
+                        <div class="slider slider-image">
+                          <div><img src="images/images.png">
+                            <h4 class="slider-image__title">Video Title</h4>
+                            <p class="slider-image__text">Random Contents Go Here 1</p><a class="button-link" href="#">Product Page</a>
+                          </div>
+                          <div><img src="images/images.png">
+                            <h4 class="slider-image__title">Video Title</h4>
+                            <p class="slider-image__text">Random Contents Go Here 2</p><a class="button-link" href="#">Product Page</a>
+                          </div>
+                          <div><img src="images/images.png">
+                            <h4 class="slider-image__title">Video Title</h4>
+                            <p class="slider-image__text">Random Contents Go Here 3</p><a class="button-link" href="#">Product Page</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="message__time">2 mins ago</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message message--right">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box"><img src="images/images.png" alt=""></div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="message__text">Option selection</div>
+                        <div class="radio radio--tick">
+                          <input class="radio__input" type="checkbox" id="radio1" name="choice">
+                          <label class="radio__label btn-choice" for="radio1">Elders of the internet kill me softly</label>
+                        </div>
+                        <div class="radio radio--tick">
+                          <input class="radio__input" type="checkbox" id="radio2" name="choice">
+                          <label class="radio__label btn-choice" for="radio2">Option 1</label>
+                        </div>
+                        <div class="radio radio--tick">
+                          <input class="radio__input" type="checkbox" id="radio3" name="choice">
+                          <label class="radio__label btn-choice" for="radio3">Option 2</label>
+                        </div>
+                      </div>
+                      <button class="button-confirm">Confirm</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis? luctus, metus.</div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--right">
+                  <div class="message__group">
+                    <div class="message__author">You</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis? luctus, metus.</div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">
+                        <div class="message__text">Option selection</div>
+                        <div class="radio radio--dot">
+                          <input class="radio__input" type="radio" id="radioo1" name="choice">
+                          <label class="radio__label btn-choice" for="radioo1">Elders of the internet kill me softly</label>
+                        </div>
+                        <div class="radio radio--dot">
+                          <input class="radio__input" type="radio" id="radioo2" name="choice">
+                          <label class="radio__label btn-choice" for="radioo2">Option 1</label>
+                        </div>
+                        <div class="radio radio--dot">
+                          <input class="radio__input" type="radio" id="radioo3" name="choice">
+                          <label class="radio__label btn-choice" for="radioo3">Option 2</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box"><img src="images/images.png" alt=""></div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">
+                        <div class="message__text">How was your experience?</div>
+                        <div class="reaction">
+                          <div class="reaction__list js-reaction">
+                            <div class="reaction__item" data-reaction="Terrible"><img src="images/sticker01.png" alt=""></div>
+                            <div class="reaction__item" data-reaction="Bad"><img src="images/sticker02.png" alt=""></div>
+                            <div class="reaction__item" data-reaction="Okayish"><img src="images/sticker03.png" alt=""></div>
+                            <div class="reaction__item" data-reaction="Good"><img src="images/sticker04.png" alt=""></div>
+                            <div class="reaction__item" data-reaction="Awesome"><img src="images/sticker05.png" alt=""></div>
+                          </div>
+                          <div class="reaction__text"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">
+                        <div class="message__text">How likely do you recommend us to a friend or colleague?</div>
+                        <div class="vote-number__list">
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote1" name="choice" checked="active">
+                            <label class="radio__label btn-choice" for="vote1">1</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote2" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote2">2</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote3" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote3">3</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote4" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote4">4</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote5" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote5">5</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote6" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote6">6</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote7" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote7">7</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote8" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote8">8</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote9" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote9">9</label>
+                          </div>
+                          <div class="radio radio--circle">
+                            <input class="radio__input" type="radio" id="vote10" name="choice" checked="">
+                            <label class="radio__label btn-choice" for="vote10">10</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="message__text">Upload your files</div>
+                        <div class="box-upload">
+                          <div class="box-upload__group">
+                            <input class="box-upload__input" type="file">
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button-confirm">Confirm</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--confirm">
+                        <div class="message__text">Upload your files</div>
+                        <div class="box-upload">
+                          <div class="box-upload__group box-upload__group--file-type">
+                            <input class="box-upload__input" type="file">
+                          </div>
+                          <div class="box-upload__file-name">Filename.pdf</div>
+                        </div>
+                      </div>
+                      <button class="button-confirm">Confirm</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="file-type">
+                  <div class="file-type__item"><img src="images/icon_word.svg" alt=""></div>
+                  <div class="file-type__item"><img src="images/icon_pdf.svg" alt=""></div>
+                  <div class="file-type__item"><img src="images/icon_excel.svg" alt=""></div>
+                </div>
+                <div class="message message--left44">
+                  <div class="message__group">
+                    <div class="message__box-wrap">
+                      <div class="message__author">Josie Goodman</div>
+                      <div class="message__box message__box--image message__box--confirm">
+                        <div class="message__text">Upload your files</div>
+                        <div class="box-upload">
+                          <div class="box-upload__group">
+                            <div class="box-upload__img">
+                              <div class="box-upload__remove"></div><img src="images/images.png" alt="">
+                            </div>
+                          </div>
+                          <div class="box-upload__file-name">Filename.jpg</div>
+                        </div>
+                      </div>
+                      <button class="button-confirm">Confirm</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--image message__box--confirm">
+                        <div class="message__text">Upload your files</div>
+                        <div class="box-upload">
+                          <div class="box-upload__group">
+                            <div class="box-upload__img">
+                              <div class="box-upload__remove"></div><img src="images/images.png" alt="">
+                            </div>
+                          </div>
+                          <h4 class="box-upload__title">Filename.jpg</h4>
+                          <div class="box-upload__text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris.</div><a class="button-link" href="#">Product Page</a>
+                        </div>
+                      </div>
+                      <button class="button-confirm">Confirm</button>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__group">
+                    <div class="message__author">Josie Goodman</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box message__box--link">
+                        <div class="message__text">Links</div><a class="button-link" href="#">Product Page</a><a class="button-link" href="#">Product Page</a>
+                      </div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+                <div class="message message--right">
+                  <div class="message__group">
+                    <div class="message__author">You</div>
+                    <div class="message__box-wrap">
+                      <div class="message__box">Option 1.</div>
+                    </div>
+                    <div class="message__time">2 mins ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-footer">
+              <div class="copyright"><img src="images/copyright.svg" alt=""><span class="copyright__by">by</span><span class="copyright__company">ObiiBot</span></div>
+              <div class="chat-box__input">
+                <textarea class="js-textarea" placeholder="Type your message here"></textarea>
+                <div class="chat-box__button-send"></div>
+              </div>
+            </div>
+          </div>
+          <div class="calendar">
+            <div class="calendar__container">
+              <div class="calendar__date">
+                <div class="date"></div>
+                <div class="year-mask"></div>
+                <ul class="year">
+                  <li class="year__item" data-year="2020">2020</li>
+                  <li class="year__item" data-year="2021">2021</li>
+                  <li class="year__item" data-year="2022">2022</li>
+                  <li class="year__item" data-year="2023">2023</li>
+                  <li class="year__item" data-year="2024">2024</li>
+                  <li class="year__item" data-year="2025">2025</li>
+                  <li class="year__item" data-year="2026">2026</li>
+                  <li class="year__item" data-year="2027">2027</li>
+                  <li class="year__item" data-year="2028">2028</li>
+                  <li class="year__item" data-year="2029">2029</li>
+                </ul>
+                <div class="month-mask"></div>
+                <ul class="month">
+                  <li class="month__item" data-month="0">January</li>
+                  <li class="month__item" data-month="1">February</li>
+                  <li class="month__item" data-month="2">March</li>
+                  <li class="month__item" data-month="3">April</li>
+                  <li class="month__item" data-month="4">May</li>
+                  <li class="month__item" data-month="5">June</li>
+                  <li class="month__item" data-month="6">July</li>
+                  <li class="month__item" data-month="7">August</li>
+                  <li class="month__item" data-month="8">September</li>
+                  <li class="month__item" data-month="9">October</li>
+                  <li class="month__item" data-month="10">November</li>
+                  <li class="month__item" data-month="11">December</li>
+                </ul>
+              </div>
+              <div class="calendar__hour">
+                <div class="first-chose-time calendar__hour-group active">
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour0" name="choice">
+                    <label class="radio__label btn-choice" for="hour0">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour1" name="choice">
+                    <label class="radio__label btn-choice" for="hour1">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour2" name="choice">
+                    <label class="radio__label btn-choice" for="hour2">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour3" name="choice">
+                    <label class="radio__label btn-choice" for="hour3">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour4" name="choice">
+                    <label class="radio__label btn-choice" for="hour4">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour5" name="choice">
+                    <label class="radio__label btn-choice" for="hour5">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour6" name="choice">
+                    <label class="radio__label btn-choice" for="hour6">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour7" name="choice">
+                    <label class="radio__label btn-choice" for="hour7">09:00 AM</label>
+                  </div>
+                  <div class="time-control">
+                    <div class="time-control__icon time-control__icon--prev js-prev-hour"></div>
+                    <div class="time-control__icon time-control__icon--next js-next-hour active"></div>
+                  </div>
+                </div>
+                <div class="last-chose-time calendar__hour-group">
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour00" name="choice">
+                    <label class="radio__label btn-choice" for="hour00">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour01" name="choice">
+                    <label class="radio__label btn-choice" for="hour01">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour02" name="choice">
+                    <label class="radio__label btn-choice" for="hour02">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour03" name="choice">
+                    <label class="radio__label btn-choice" for="hour03">09:00 AM</label>
+                  </div>
+                  <div class="radio hour-choose radio--hour">
+                    <input class="radio__input" type="radio" id="hour04" name="choice">
+                    <label class="radio__label btn-choice" for="hour04">09:00 AM</label>
+                  </div>
+                  <div class="time-control">
+                    <div class="time-control__icon time-control__icon--prev js-prev-hour"></div>
+                    <div class="time-control__icon time-control__icon--next js-next-hour active"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calendar__control">
+              <div class="calendar__button calendar__button--close js-calendar-close">Close</div>
+              <div class="calendar__button calendar__button--confirm js-calendar-confirm">Confirm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

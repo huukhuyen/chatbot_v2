@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <rect id="b" width="328" height="122" x="24" y="103" rx="31"/>
+        <filter id="a" width="140.9%" height="209.8%" x="-20.4%" y="-50.8%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3.5" result="shadowSpreadOuter1"/>
+            <feOffset dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="18"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0959079983 0"/>
+        </filter>
+        <circle id="d" cx="42" cy="71" r="38"/>
+        <filter id="c" width="276.3%" height="276.3%" x="-88.2%" y="-81.6%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3.5" result="shadowSpreadOuter1"/>
+            <feOffset dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="18"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.17930507 0"/>
+        </filter>
+        <circle id="f" cx="40" cy="40" r="40"/>
+        <filter id="e" width="256.2%" height="256.2%" x="-78.1%" y="-68.1%" filterUnits="objectBoundingBox">
+            <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="19.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0959079983 0"/>
+        </filter>
+        <circle id="g" cx="40" cy="40" r="40"/>
+        <circle id="i" cx="40" cy="40" r="40"/>
+        <path id="k" d="M52 11.92l22.32 6.16c2.56.88 4.56 2.8 5.68 5.28v7.84H0v-7.84c1.04-2.48 3.12-4.4 5.68-5.28L28 11.92V0h24v11.92z"/>
+        <path id="m" d="M52 11.92l22.32 6.16c2.56.88 4.56 2.8 5.68 5.28v7.84H0v-7.84c1.04-2.48 3.12-4.4 5.68-5.28L28 11.92V0h24v11.92z"/>
+        <path id="o" d="M7.2 16C3.12 15.6 0 12.16 0 8S3.12.48 7.2 0v16z"/>
+        <path id="q" d="M0 16c4.08-.4 7.2-3.84 7.2-8S4.08.48 0 0v16z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#000" filter="url(#a)" opacity=".657" transform="translate(-292 -212)" xlink:href="#b"/>
+        <use fill="#000" filter="url(#c)" opacity=".657" xlink:href="#d"/>
+        <g>
+            <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+            <use fill="#FFF" xlink:href="#f"/>
+        </g>
+        <g>
+            <circle cx="40" cy="40" r="40" fill="#FFF" fill-rule="nonzero"/>
+            <mask id="h" fill="#fff">
+                <use xlink:href="#g"/>
+            </mask>
+            <path fill="#E6C19C" fill-rule="nonzero" d="M52 60.72l22.32 6.16c2.56.88 4.56 2.8 5.68 5.28V80H0v-7.84c1.04-2.48 3.12-4.4 5.68-5.28L28 60.72V48.8h24v11.92z" mask="url(#h)"/>
+            <mask id="j" fill="#fff">
+                <use xlink:href="#i"/>
+            </mask>
+            <g mask="url(#j)">
+                <g transform="translate(0 48.8)">
+                    <mask id="l" fill="#fff">
+                        <use xlink:href="#k"/>
+                    </mask>
+                    <path fill="#D4B08C" fill-rule="nonzero" d="M40 13.6c-1.36 0-3.12-.32-4.32-.88-1.36-.72-6.4-4.88-8.16-6.64-2.24-2.4-3.36-5.44-3.68-10.64-.32-5.2-1.68-23.76-1.68-28 0-6 4.56-15.36 17.68-15.36H40c13.2.08 17.68 9.36 17.68 15.36 0 4.24-1.36 22.8-1.68 28-.32 5.2-1.44 8.16-3.68 10.64-1.68 1.84-6.72 5.92-8.16 6.64-1.04.56-2.8.88-4.16.88z" mask="url(#l)"/>
+                </g>
+                <g transform="translate(0 48.8)">
+                    <mask id="n" fill="#fff">
+                        <use xlink:href="#m"/>
+                    </mask>
+                    <path fill="#249CF2" fill-rule="nonzero" d="M0-2.4h80v33.6H0V-2.4zm40 24c8.8 0 16-5.04 16-11.2C56 4.24 48.8-.8 40-.8S24 4.24 24 10.4c0 6.16 7.2 11.2 16 11.2z" mask="url(#n)"/>
+                </g>
+            </g>
+            <path fill="#F2CEA5" fill-rule="nonzero" d="M40 59.2c-1.2 0-2.8-.24-3.84-.72-1.28-.56-5.76-3.68-7.28-5.04-2-1.84-3.04-4.08-3.36-8C25.2 41.52 24 27.6 24 24.4c0-4.56 4.08-11.6 16-11.6s16 7.04 16 11.6c0 3.2-1.2 17.2-1.52 21.12-.32 3.92-1.28 6.16-3.36 8-1.52 1.36-6.08 4.48-7.28 5.04-1.04.4-2.64.64-3.84.64z"/>
+            <path fill="#D98C21" fill-rule="nonzero" d="M54.4 33.2s1.28.32 3.6-.48c.32-1.44 1.2-5.6 1.2-7.92 0-2.32-.24-4.56-1.52-6.48-1.44-2.08-4.48-3.28-6.08-3.28-1.84 1.12-6.16 3.68-7.52 5.2-.72.8.32 1.44.32 1.44s.96-.4 1.36-.48c2-.56 5.04-.24 6.72 1.28 1.92 1.76 1.92 5.92 2 7.04-.08 1.04-.08 3.68-.08 3.68z"/>
+            <path fill="#E6A422" fill-rule="nonzero" d="M22 32.8c2.32.8 3.6 2.72 3.6 2.72v-5.04c0-1.28 0-5.2 1.92-7.76 2.56-3.44 6.72-4.24 8.88-2.8 1.12.72 4.88 4.4 8.88 1.36 2.4-1.84 6.8-6 6.8-6S49.76 8.16 39.2 8.96c-4.48.4-9.44-.72-9.44-.72s-.08 2 .72 3.04c-6.64 1.84-8.8 6.64-9.44 10.32a9.93 9.93 0 0 0-.24 2.16v1.12c0 2.32.88 6.4 1.2 7.92z"/>
+            <path fill="#A3705F" fill-rule="nonzero" d="M45.6 48H34.4c-.32 0-.48.32-.32.64 1.04 1.84 2.96 2.8 5.36 2.96 2.48.16 5.2-1.04 6.48-2.96.16-.24 0-.64-.32-.64z"/>
+            <circle cx="47.2" cy="36" r="1.6" fill="#262626" fill-rule="nonzero"/>
+            <circle cx="32.8" cy="36" r="1.6" fill="#262626" fill-rule="nonzero"/>
+            <path stroke="#CC9872" stroke-width="1.6" d="M28 33.6s.88-2.4 4.88-2.4c2.72 0 4.32 1.2 5.12 2.4"/>
+            <path stroke="#BB8660" stroke-width="1.6" d="M52.08 33.6s-.88-2.4-4.88-2.4c-3.84 0-5.6 2.4-5.6 4v7.2"/>
+            <path fill="#6B363E" fill-rule="nonzero" d="M58.4 29.6c0-10.16-8.24-18.4-18.4-18.4-10.16 0-18.4 8.24-18.4 18.4V36H24v-6.4c-.08-8.8 7.12-16.08 16-16 8.88-.08 16.08 7.2 16 16v7.2h2.4v-7.2z"/>
+            <path stroke="#6B363E" stroke-width="1.6" d="M56.8 44.16C56.72 54.64 46.4 55.2 46.4 55.2"/>
+            <path fill="#452228" fill-rule="nonzero" d="M41.84 54.32l4.64-1.28c.88-.24 1.76.24 1.92 1.12l.4 1.52c.24.88-.24 1.76-1.12 1.92l-4.64 1.28c-.88.24-1.76-.24-1.92-1.12l-.4-1.52c-.24-.8.32-1.68 1.12-1.92z"/>
+            <path fill="#6B363E" fill-rule="nonzero" d="M25.6 46.4c-4.08-.4-7.2-3.84-7.2-8s3.12-7.52 7.2-8v16z"/>
+            <g transform="translate(18.4 30.4)">
+                <mask id="p" fill="#fff">
+                    <use xlink:href="#o"/>
+                </mask>
+                <path fill="#452228" fill-rule="nonzero" d="M0 0h5.6v16H0z" mask="url(#p)"/>
+            </g>
+            <path fill="#6B363E" fill-rule="nonzero" d="M54.4 46.4c4.08-.4 7.2-3.84 7.2-8s-3.12-7.52-7.2-8v16z"/>
+            <g transform="translate(54.4 30.4)">
+                <mask id="r" fill="#fff">
+                    <use xlink:href="#q"/>
+                </mask>
+                <path fill="#452228" fill-rule="nonzero" d="M1.6 0H8v16H1.6z" mask="url(#r)"/>
+            </g>
+        </g>
+    </g>
+</svg>
