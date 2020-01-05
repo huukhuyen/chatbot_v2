@@ -33,10 +33,10 @@ setTimeout(function() {
 }, 500);
 
 setTimeout(function() {
-  $('#iframe-chat').fadeIn();
-  $('#iframe-chat, .toggle-icon__number').removeClass('d-none');
+  $('#obii-chat-iframe-chat').fadeIn();
+  $('#obii-chat-iframe-chat, .obii-chat-toggle-icon__number').removeClass('d-none');
   try {
-    var sound = document.getElementById('audio');
+    var sound = document.getElementById('obii-chat-audio');
     sound.play();
   } catch (error) {
     console.log(error);
@@ -151,42 +151,42 @@ $('.js-button-chat').click(function() {
 
 // Implement with Iframe
 $('.js-chat-intro').click(function() {
-  $('#audio').remove();
+  $('#obii-chat-audio').remove();
   $('.chat-box--welcome').hide();
   $('.chat-box--option').show();
-  $('.toggle-icon', window.parent.document).addClass('active js-close-chat');
-  $('.toggle-icon', window.parent.document).removeClass('glow');
-  $('#iframe-chat', window.parent.document).addClass('chat-active');
+  $('.obii-chat-toggle-icon', window.parent.document).addClass('active js-close-chat');
+  $('.obii-chat-toggle-icon', window.parent.document).removeClass('glow');
+  $('#obii-chat-iframe-chat', window.parent.document).addClass('chat-active');
 });
 
-$('.toggle-icon').click(function() {
-  $('#audio').remove();
-  $('#iframe-chat')
+$('.obii-chat-toggle-icon').click(function() {
+  $('#obii-chat-audio').remove();
+  $('#obii-chat-iframe-chat')
     .fadeIn()
     .toggleClass('chat-active');
-  $('#iframe-chat')
+  $('#obii-chat-iframe-chat')
     .contents()
     .find('.chat-box')
     .hide();
-  $('#iframe-chat')
+  $('#obii-chat-iframe-chat')
     .contents()
     .find('.chat-box--option')
     .show();
   setTimeout(function() {
-    $('.toggle-icon').toggleClass('active js-close-chat glow');
+    $('.obii-chat-toggle-icon').toggleClass('active js-close-chat glow');
   }, 100);
 });
 
 $(document).on('click', '.js-close-chat', function() {
-  $('#iframe-chat')
+  $('#obii-chat-iframe-chat')
     .contents()
     .find('.chat-box')
     .hide();
-  $('#iframe-chat')
+  $('#obii-chat-iframe-chat')
     .contents()
     .find('.iti__country-list')
     .toggleClass('iti__hide');
-  // $('#iframe-chat')
+  // $('#obii-chat-iframe-chat')
   //   .contents()
   //   .find('.chat-box--welcome')
   //   .show();

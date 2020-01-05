@@ -2874,7 +2874,7 @@ input, textarea, select, button {
 }
 
 /* stylelint-disable */
-.toggle-icon {
+.obii-chat-toggle-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2903,7 +2903,7 @@ input, textarea, select, button {
 }
 
 @media (max-device-width: 767.98px) {
-  .toggle-icon {
+  .obii-chat-toggle-icon {
     right: 10px;
     bottom: 20px;
     width: 60px;
@@ -2912,7 +2912,7 @@ input, textarea, select, button {
   }
 }
 
-.toggle-icon:before {
+.obii-chat-toggle-icon:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2928,45 +2928,45 @@ input, textarea, select, button {
   transition: all .3s;
 }
 
-.toggle-icon.glow {
+.obii-chat-toggle-icon.glow {
   border: 2px solid #fff;
   -webkit-animation: anim-glow 2s ease infinite;
           animation: anim-glow 2s ease infinite;
 }
 
-.toggle-icon.active {
+.obii-chat-toggle-icon.active {
   background: #8300D8;
   bottom: 44px;
 }
 
 @media (max-device-width: 767.98px) {
-  .toggle-icon.active {
+  .obii-chat-toggle-icon.active {
     right: 10px;
     bottom: 20px;
   }
 }
 
-.toggle-icon.active:before {
+.obii-chat-toggle-icon.active:before {
   opacity: 1;
   width: 20px;
   height: 20px;
 }
 
-.toggle-icon.active .toggle-icon__number {
+.obii-chat-toggle-icon.active .obii-chat-toggle-icon__number {
   display: none;
 }
 
-.toggle-icon img {
+.obii-chat-toggle-icon img {
   max-height: 70px;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
 
-.toggle-icon.active img {
+.obii-chat-toggle-icon.active img {
   max-height: 0;
 }
 
-.toggle-icon__number {
+.obii-chat-toggle-icon__number {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2988,7 +2988,7 @@ input, textarea, select, button {
   border-radius: 50%;
 }
 
-.toggle-icon__img {
+.obii-chat-toggle-icon__img {
   border-radius: 50%;
   overflow: hidden;
 }
@@ -3620,7 +3620,7 @@ input::-moz-focus-outer {
   cursor: pointer;
 }
 
-#iframe-chat {
+#obii-chat-iframe-chat {
   position: fixed;
   right: 20px;
   bottom: 90px;
@@ -3631,20 +3631,20 @@ input::-moz-focus-outer {
 }
 
 @media (max-device-width: 767.98px) {
-  #iframe-chat {
+  #obii-chat-iframe-chat {
     width: 100%;
     right: 0;
     bottom: 60px;
   }
 }
 
-#iframe-chat.chat-active {
+#obii-chat-iframe-chat.chat-active {
   right: 110px;
   bottom: 0;
 }
 
 @media (max-device-width: 767.98px) {
-  #iframe-chat.chat-active {
+  #obii-chat-iframe-chat.chat-active {
     right: 0;
     bottom: 60px;
   }
