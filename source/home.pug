@@ -4,9 +4,11 @@ block head
   +head('Home')
 
 block main
-  .obii-chat-toggle-icon.glow
-    audio#obii-chat-audio(src="audio/notification.mp3" autostart="false")
-    .obii-chat-toggle-icon__number.d-none 1
-    .obii-chat-toggle-icon__img
-      img(src="images/icon_user.svg", alt="")
-  iframe#obii-chat-iframe-chat.d-none(src="./chatbot.html")
+  #obii-chat-group
+    .obii-chat-toggle-icon.glow
+      audio#obii-chat-audio(src="audio/notification.mp3" autostart="false")
+      .obii-chat-toggle-icon__number.d-none 1
+      .obii-chat-toggle-icon__img
+        img(src="images/icon_user.svg", alt="")
+    #obii-chat-frame-container
+      iframe#obii-chat-iframe-chat.d-none(src="./chatbot.html")
