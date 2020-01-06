@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css';
 .flatpickr-calendar {
@@ -1210,8 +1212,6 @@ span.flatpickr-weekday {
   right: -4px;
   top: -8px;
 }
-
-/*# sourceMappingURL=easy-autocomplete.min.css.map */
 .iti {
   position: relative;
   display: inline-block;
@@ -2900,6 +2900,8 @@ input, textarea, select, button {
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (max-device-width: 767.98px) {
@@ -2926,6 +2928,11 @@ input, textarea, select, button {
   opacity: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+.obii-chat-toggle-icon * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .obii-chat-toggle-icon.glow {
@@ -2958,6 +2965,8 @@ input, textarea, select, button {
 
 .obii-chat-toggle-icon img {
   max-height: 70px;
+  max-width: 100%;
+  vertical-align: middle;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -2991,6 +3000,49 @@ input, textarea, select, button {
 .obii-chat-toggle-icon__img {
   border-radius: 50%;
   overflow: hidden;
+}
+
+.icon-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 99;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+#obii-chat-iframe-chat {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  border: 0;
+  width: 430px;
+  height: 100%;
+  z-index: 99;
+}
+
+@media (max-device-width: 767.98px) {
+  #obii-chat-iframe-chat {
+    width: 100%;
+    right: 0;
+    bottom: 60px;
+  }
+}
+
+#obii-chat-iframe-chat.chat-active {
+  right: 110px;
+  bottom: 0;
+}
+
+@media (max-device-width: 767.98px) {
+  #obii-chat-iframe-chat.chat-active {
+    right: 0;
+    bottom: 60px;
+  }
 }
 
 .button {
@@ -3607,49 +3659,6 @@ input::-moz-focus-outer {
 }
 
 /* stylelint-disable */
-.icon-close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 99;
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-}
-
-#obii-chat-iframe-chat {
-  position: fixed;
-  right: 20px;
-  bottom: 90px;
-  border: 0;
-  width: 430px;
-  height: 100%;
-  z-index: 99;
-}
-
-@media (max-device-width: 767.98px) {
-  #obii-chat-iframe-chat {
-    width: 100%;
-    right: 0;
-    bottom: 60px;
-  }
-}
-
-#obii-chat-iframe-chat.chat-active {
-  right: 110px;
-  bottom: 0;
-}
-
-@media (max-device-width: 767.98px) {
-  #obii-chat-iframe-chat.chat-active {
-    right: 0;
-    bottom: 60px;
-  }
-}
-
 .chat-wrap {
   position: fixed;
   left: 30px;
@@ -4415,5 +4424,3 @@ input::-moz-focus-outer {
   max-height: 300px;
   overflow: auto;
 }
-
-/*# sourceMappingURL=main.css.map */
