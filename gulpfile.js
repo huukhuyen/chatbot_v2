@@ -86,6 +86,12 @@ var options = {
       baseDirs.source + 'images/**/*.*'
     ],
     out: baseDirs.dest + 'images/'
+  },
+  audio: {
+    in: [
+      baseDirs.source + 'audio/**/*.*'
+    ],
+    out: baseDirs.dest + 'audio/'
   }
 };
 
@@ -158,6 +164,13 @@ gulp.task('copy:images', function() {
   return gulp
     .src(options.images.in)
     .pipe(gulp.dest(options.images.out));
+});
+
+// Copy Image
+gulp.task('copy:audio', function() {
+  return gulp
+    .src(options.audio.in)
+    .pipe(gulp.dest(options.audio.out));
 });
 
 
@@ -262,7 +275,7 @@ gulp.task('stylelint', function(cb) {
 gulp.task('compile:style', gulp.series('stylelint', function stylelintChecking(cb) {
   return gulp
     .src(options.scss.in)
-    .pipe($.sourcemaps.init())
+    // .pipe($.sourcemaps.init())
     .pipe($.sass(options.scss)
       .on('error', $.sass.logError))
     .pipe($.autoprefixer('last 2 versions'))
@@ -337,6 +350,7 @@ gulp.task('build', function(cb) {
     'copy:favicon',
     'copy:fonts',
     'copy:images',
+    'copy:audio',
     'compile:markup',
     'compile:style',
     'compile:script'

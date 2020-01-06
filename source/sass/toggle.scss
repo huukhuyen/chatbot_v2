@@ -1,0 +1,41 @@
+// We architecting this project follow as the '7-1 Pattern' (7 folders, 1 file)
+// For more detail about this pattern
+// (https://sass-guidelin.es/#the-7-1-pattern)
+
+// 1. Vendors
+// ----------
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap';
+// @import 'flatpickr/dist/flatpickr.min';
+// @import 'easy-autocomplete/dist/easy-autocomplete.min';
+// @import 'intl-tel-input/build/css/intlTelInput.min';
+
+// 2. Abstracts
+// ------------
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 3. Base
+// -------
+// @import 'base/global';
+
+// 4. Layout
+// ---------
+// @import 'layout/footer';
+
+// 5. Components
+// -------------
+@import 'components/toggle';
+// @import 'components/button';
+// @import 'components/checkbox';
+// @import 'components/calendar';
+// @import 'components/range';
+
+// 6. Pages
+// --------
+// @import 'pages/home';
+
+// 7. Override
+// @import 'plugin/plugin';
+@import 'base/helper';
+// ---------
+// We just have only 1 theme in this project
