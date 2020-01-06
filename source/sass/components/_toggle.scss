@@ -1,5 +1,5 @@
 /* stylelint-disable */
-.obii-chat-toggle-icon {
+#obii-chat-toggle-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@
     transform: translate(-50%, -50%);
     width: 5px;
     height: 5px;
-    background: url("../images/close_icon.svg") no-repeat center;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDQyIDQyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGlkPSJDbG9zZS1pY29uX2NvcHkiIGRhdGEtbmFtZT0iQ2xvc2UtaWNvbiBjb3B5IiBjbGFzcz0iY2xzLTEiIGQ9Ik0yMTEzLjcsMTYwMC45OWwxNi41MS0xNi41M2EyLjYyMywyLjYyMywwLDAsMC0zLjcxLTMuNzFsLTE2LjUxLDE2LjUyLTE2LjUxLTE2LjUyYTIuNjI3LDIuNjI3LDAsMSwwLTMuNzIsMy43MWwxNi41MiwxNi41My0xNi41MiwxNi41M2EyLjYyNywyLjYyNywwLDAsMCwzLjcyLDMuNzFsMTYuNTEtMTYuNTIsMTYuNTEsMTYuNTJhMi42MTksMi42MTksMCwwLDAsMy43MSwwLDIuNjEzLDIuNjEzLDAsMCwwLDAtMy43MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDg5IC0xNTgwKSIvPgo8L3N2Zz4K") no-repeat center;
     background-size: contain;
     opacity: 0;
     transition: all .3s;
