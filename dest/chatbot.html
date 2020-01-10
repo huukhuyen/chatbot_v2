@@ -493,15 +493,15 @@
             </div>
             <div class="chat-footer">
               <div class="copyright"><img src="images/copyright.svg" alt=""><span class="copyright__by">by</span><span class="copyright__company">ObiiBot</span></div>
-              <!-- -
-							.chat-box__input
-							  textarea.js-textarea(placeholder="Type your message here")
-							  .chat-box__button-send
-							-->
-              <div class="chat-box__input chat-box__input--phone">
-                <input id="js-input-phone" type="tel">
+              <div class="chat-box__input">
+                <input id="js-input-location" placeholder="Type your message here">
                 <div class="chat-box__button-send"></div>
               </div>
+              <!-- -
+							.chat-box__input.chat-box__input--phone
+							  input#js-input-phone(type="tel")
+							  .chat-box__button-send
+							-->
             </div>
           </div>
           <div class="calendar">
@@ -612,6 +612,7 @@
         </div>
       </div>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.39&amp;libraries=places&amp;key=AIzaSyCUPyVQ6Z3rnX6gvpdkzsFxUHb6e237zwA"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

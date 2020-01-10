@@ -3,6 +3,15 @@ function checkPositionSlide() {
   $('.slick-next, .slick-prev').css('top', `calc(${heightSlideItem}px / 2 )`);
 }
 
+var clearTime = setTimeout(function() {
+  if ($('#js-input-location').length > 0) {
+    console.log('call')
+    var input = document.getElementById('js-input-location');
+    new google.maps.places.Autocomplete(input);
+    clearTimeout(clearTime);
+  }
+}, 300);
+
 setTimeout(function() {
   checkPositionSlide();
 }, 500);
@@ -91,24 +100,24 @@ $('.js-reaction .reaction__item').on('click', function() {
 });
 
 // Auto complete input
-var options = {
-  data: ['blue', 'green', 'pink', 'red', 'yellow'],
-  list: {
-    showAnimation: {
-      type: 'slide',
-      time: 300,
-      callback: function() {}
-    },
+// var options = {
+//   data: ['blue', 'green', 'pink', 'red', 'yellow'],
+//   list: {
+//     showAnimation: {
+//       type: 'slide',
+//       time: 300,
+//       callback: function() {}
+//     },
 
-    hideAnimation: {
-      type: 'slide',
-      time: 300,
-      callback: function() {}
-    }
-  }
-};
+//     hideAnimation: {
+//       type: 'slide',
+//       time: 300,
+//       callback: function() {}
+//     }
+//   }
+// };
 
-$('.js-textarea').easyAutocomplete(options);
+// $('.js-textarea').easyAutocomplete(options);
 
 // Show slider
 $('.js-button-chat').click(function() {
@@ -222,3 +231,6 @@ try {
 
 $('#js-input-phone').css('padding-left', '70px');
 
+$('#js-input-location').on('input', function() {
+  $('.pac-container').css('min-width', '370px');
+});

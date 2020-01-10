@@ -368,13 +368,14 @@ block main
               img(src="images/copyright.svg", alt="")
               span.copyright__by by
               span.copyright__company ObiiBot
-            // -
-              .chat-box__input
-                textarea.js-textarea(placeholder="Type your message here")
-                .chat-box__button-send
-            .chat-box__input.chat-box__input--phone
-              input#js-input-phone(type="tel")
+            .chat-box__input
+              //- textarea.js-textarea(placeholder="Type your message here")
+              input#js-input-location(placeholder="Type your message here")
               .chat-box__button-send
+            // -
+              .chat-box__input.chat-box__input--phone
+                input#js-input-phone(type="tel")
+                .chat-box__button-send
         .calendar
           .calendar__container
             .calendar__date
@@ -407,3 +408,4 @@ block main
           .calendar__control
             .calendar__button.calendar__button--close.js-calendar-close Close
             .calendar__button.calendar__button--confirm.js-calendar-confirm Confirm
+

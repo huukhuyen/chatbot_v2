@@ -85,7 +85,7 @@
     box-shadow: 0 2px 40px 0 rgba(152, 112, 172, 0.15);
     padding: 8px;
 
-    textarea {
+    textarea, input {
       width: calc(100% - 40px);
       height: 40px;
       padding: 9px 30px 7px 10px;
@@ -565,4 +565,25 @@
 
 .chat-content {
 
+}
+
+.pac-container {
+  z-index: 999999 !important;
+  top: inherit !important;
+  left: 30px !important;
+  bottom: 100px !important;
+  font-family: 'Lato', sans-serif;
+  padding: 0px 10px;
+  font-size: 1.5rem;
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid $border3;
+}
+
+.pac-item {
+  padding: 6px 4px;
+
+  &:first-child {
+    border-top: none;
+  }
 }
